@@ -63,7 +63,7 @@ git init
 git status
 (create repo on website)
 git pull "url.git"
-git add git add . // README.md
+git add . // README.md
 git status
 git commit - m "Created README" - m "description"
 git remote add origin "url.git"
@@ -73,9 +73,14 @@ git push - u origin master/[branch]
 
 # if not working create branch, push, pull into master, push
 git checkout - b[name]
-git push - u origin branch
+git push - u origin[name]
 git checkout master
 git pull origin master - -allow-unrelated-histories
+
+# Error: pre-recieve hook declined git
+git pull - -rebase
+git pull - -rebase "url.git"
+git push - u origin master
 
 git push - u origin master
 (change branch from main to master on Github)
@@ -113,6 +118,8 @@ git reset - -hard  # unstage, remove changes
 
 # pull requests
 
+git stash push --include-untracked # if unable to pull, stash personal changes
+git stash drop # or drop them altogether
 git pull "url.git"  # combination of fetch and merge
 
 
