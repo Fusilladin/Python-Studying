@@ -72,10 +72,12 @@ git pull "url.git"
 git push - u origin master/[branch]
 
 # if not working create branch, push, pull into master, push
-git checkout - b[name]
-git push - u origin[name]
-git checkout master
-git pull origin master - -allow-unrelated-histories
+git checkout -b [name]
+git push - u origin master
+git pull origin [name] - -allow-unrelated-histories
+
+# changing branches in Github
+Settings -> Branches -> 2 arrow button -> dropdown -> master -> Update -> Code
 
 # Error: pre-recieve hook declined git
 git pull - -rebase
@@ -116,8 +118,11 @@ git log  # see all of your logs and descriptions
 git reset[commit hash]  # undo commit by specific hash
 git reset - -hard  # unstage, remove changes
 
-# pull requests
 
+# Disable SSLCertificate if not connecting
+git config --global http.sslVerify false
+
+# pull requests
 git stash push --include-untracked # if unable to pull, stash personal changes
 git stash drop # or drop them altogether
 git pull "url.git"  # combination of fetch and merge
