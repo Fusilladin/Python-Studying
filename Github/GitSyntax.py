@@ -128,4 +128,6 @@ git stash drop # or drop them altogether
 git pull "url.git"  # combination of fetch and merge
 
 
-#
+# fix remote url 
+
+git remote set-url origin '[url].git'
